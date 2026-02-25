@@ -17,7 +17,7 @@ CONFIG_FILE = "info_channels.json"
 class InfoCommands(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.api_url = "http://raw.thug4ff.com/info"
+        self.api_url = "https://info-bot-gamma.vercel.app/player-info"
         self.generate_url = "http://profile.thug4ff.com/api/profile"
         self.session = aiohttp.ClientSession()
         self.config_data = self.load_config()
@@ -290,7 +290,7 @@ class InfoCommands(commands.Cog):
             title="❌ Player Not Found",
             description=(
                 f"UID `{uid}` not found or inaccessible.\n\n"
-                "⚠️ **Note:** IND servers are currently not working."
+
             ),
             color=0xE74C3C
         )
